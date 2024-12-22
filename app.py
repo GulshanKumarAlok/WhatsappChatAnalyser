@@ -1,7 +1,16 @@
 import streamlit as st
-import preprocessor,helper
+import preprocessor, helper
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+
+# Set page config at the very beginning
+st.set_page_config(
+    page_title="WhatsApp Chat Analyser",
+    page_icon="💬",
+    layout="wide"
+)
 
 st.sidebar.title('Whatsapp Chat Analyser')
 
@@ -132,7 +141,6 @@ if uploaded_file is not None:
             fig,ax = plt.subplots()
             ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(),autopct='%0.2f%%')
             st.pyplot(fig)
-
 
 
 
