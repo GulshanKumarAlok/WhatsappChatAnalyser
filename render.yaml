@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: Whatsapp-chat-analyser
+    name: whatsapp-chat-analyser
+    plan: free
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: streamlit run app.py
